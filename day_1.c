@@ -1,17 +1,25 @@
-#include<stdio.h>
-int main()
+#include <stdio.h>
+
+int main() 
 {
-    int arr[6]={0,1,3,4};
-    int n = 4;
-    int pos = 2;
-    int x = 2;
-    for(int i=n;i>pos;i--)
-    
-       arr[i]=arr[i-1];
-       arr[pos]=x;
-    n++;
-    for (int i = 0;i<n;i++)
-    printf("%d,",arr[i]);
+    int n, pos, x;
+    int a[100];
+    printf("enter lenght of array  :");
+    scanf("%d", &n);
+    printf("enter the array:");
+    for(int i = 0; i < n; i++) 
+    { scanf("%d", &a[i]);}
+    printf("enter the position where element is to be inserted :");
+    scanf("%d", &pos);
+    printf("enter the element to be inserted :");
+    scanf("%d", &x);
+    for(int i = n; i >= pos; i--) 
+    { a[i] = a[i - 1];}
+
+    a[pos - 1] = x;
+
+    for(int i = 0; i <= n; i++) 
+    { printf("%d ", a[i]);}
 
     return 0;
 }
